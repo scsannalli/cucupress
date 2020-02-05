@@ -6,7 +6,7 @@ const {
 } = require("cypress-cucumber-preprocessor/steps");
 
 beforeEach( () => {
-    Given ('I open spree page', () => {
+    Given ('I open spree home page', () => {
         cy.visit('localhost:3000')
     })
 }
