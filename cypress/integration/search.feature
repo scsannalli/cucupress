@@ -1,10 +1,9 @@
 Feature: The Spree Search
- 
-  I want to open a social network page
+I search for spree products and get product results
   
   @focus
   Scenario: Opening Spree Login
     Given I open spree page
-    When Click Login link
-    Then I see UserName Field 
+    When I enter "product" in the search field
+    Then I see product search results 
     
