@@ -1,0 +1,23 @@
+{
+  "name": "cucupress",
+  "version": "1.0.0",
+  "description": "Cucumber Cypress E2E Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scsannalli/cucupress.git"
+  },
+  "author": "Shiva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scsannalli/cucupress/issues"
+  },
+  "homepage": "https://github.com/scsannalli/cucupress#readme",
+  "dependencies": {
+    "cypress": "^3.8.3",
+    "cypress-cucumber-preprocessor": "^2.0.1"
+  }
+}
