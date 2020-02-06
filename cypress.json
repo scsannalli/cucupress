@@ -1,4 +1,15 @@
 {
-    "testFiles": "**/*.feature"
+    "testFiles": "**/*.feature",
+
+    
+    "cypress-cucumber-preprocessor": {
+        "cucumberJson": {
+          "generate": true,
+          "outputFolder": "cucumber-json",
+          "filePrefix": "cucumber-",
+          "fileSuffix": "a.json"
+        }
+     }  
+
 
 }
