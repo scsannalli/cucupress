@@ -25,10 +25,10 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
-            "name": "I open spree page",
+            "name": "I open spree home page",
             "result": {
               "status": "passed",
-              "duration": 41000000
+              "duration": 1781000000
             }
           },
           {
@@ -37,7 +37,8 @@
             "line": 8,
             "name": "Click Login link",
             "result": {
-              "status": "failed"
+              "status": "passed",
+              "duration": 506000000
             }
           },
           {
@@ -46,7 +47,8 @@
             "line": 9,
             "name": "I see UserName Field",
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 5000000
             }
           }
         ]

@@ -4,7 +4,7 @@ Feature: The Spree Login
   
   @focus
   Scenario: Opening Spree Login
-    Given I open spree page
+    Given I open spree home page
     When Click Login link
     Then I see UserName Field 
     

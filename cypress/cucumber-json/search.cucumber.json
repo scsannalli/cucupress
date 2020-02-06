@@ -27,8 +27,8 @@
             "line": 6,
             "name": "I open spree page",
             "result": {
-              "status": "failed",
-              "duration": 36000000
+              "status": "undefined",
+              "duration": 46000000
             }
           },
           {
