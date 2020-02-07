@@ -3,30 +3,25 @@ var download = require("download-file");
 const config = require('config');
 const minimist = require('minimist');
 
+before(async function () {
+	// fetching the command line arguments
+	const args = minimist(process.argv.slice(2));
+	// assiging  the environment globally
+	const env = args.env;
+	global.params = config.get(env);
+
+});
+
 describe("API call to search the issue attachement", () => {
 
 	let attachmentLink;
 	let fileLink;
 
-	before(async function () {
-		    // fetching the command line arguments
-				const args = minimist(process.argv.slice(2));
-
-				// assiging  the environment globally
-				const env = args.env;
-				global.params = config.get(env);
-
-
-
-	});
-
 	it("Get the URL for the attachement", async () => {
-		let response = await request(
-				"https://shivajira.atlassian.net/rest/api/2/issue/"
-			)
+		let response = await request(params.baseUrl)
 			.get("TES-2")
 			.set("Content-Type", "application/json")
-			.auth("prasadmudedla@gmail.com", "4aJ0HDFnTaFcStg3fvAc85E2")
+			.auth(params.username, params.password)
 			.retry(3);
 		attachmentLink = await response.body.fields.attachment[0].content;
 	});
@@ -35,7 +30,7 @@ describe("API call to search the issue attachement", () => {
 		let response = await request(attachmentLink)
 			.get("")
 			.set("Content-Type", "text/plain")
-			.auth("prasadmudedla@gmail.com", "4aJ0HDFnTaFcStg3fvAc85E2")
+			.auth(params.username, params.password)
 			.retry(3);
 		fileLink = response.headers.location;
 	});
