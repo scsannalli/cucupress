@@ -4,7 +4,9 @@
   "description": "Cucumber Cypress E2E Automation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "getfeatures": "mocha cypress/util/getCucumber.js --env=test --timeout 20000",
+    "tests": ""
   },
   "repository": {
     "type": "git",
@@ -17,8 +19,15 @@
   },
   "homepage": "https://github.com/scsannalli/cucupress#readme",
   "dependencies": {
+    "config": "^3.2.5",
     "cypress": "^3.8.3",
-    "cypress-cucumber-preprocessor": "^2.0.1"
+    "cypress-cucumber-preprocessor": "^2.0.1",
+    "download-file": "^0.1.5",
+    "jest": "^25.1.0",
+    "minimist": "^1.2.0",
+    "superagent": "^5.2.1",
+    "superagent-retry": "^0.6.0",
+    "supertest": "^4.0.2"
   },
   "cypress-cucumber-preprocessor": {
     "cucumberJson": {
