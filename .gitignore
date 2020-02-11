@@ -133,3 +133,5 @@ MigrationBackup/
 .ionide/
 node_modules
 config/default.json
+.DS_Store
+config/default.json

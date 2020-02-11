@@ -3,20 +3,22 @@ var download = require("download-file");
 const config = require('config');
 const minimist = require('minimist');
 
-before(async function () {
-	// fetching the command line arguments
-	const args = minimist(process.argv.slice(2));
-	// assiging  the environment globally
-	const env = args.env;
-	global.params = config.get(env);
 
-});
 
 describe("API call to search the issue attachement", () => {
 
 	let attachmentLink;
 	let fileLink;
 
+
+	before(async function () {
+		// fetching the command line arguments
+		const args = minimist(process.argv.slice(2));
+		// assiging  the environment globally
+		const env = args.env;
+		global.params = config.get(env);
+
+	});
 	it("Get the URL for the attachement", async () => {
 		let response = await request(params.baseUrl)
 			.get("TES-2")
