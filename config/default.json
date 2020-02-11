@@ -1,7 +1,11 @@
 {
     "test": {
-		"baseUrl": "",
+		"baseUrl": "https://shivajira.atlassian.net/rest/api/2/issue/",
 		"username" : "",
-		"password" : ""
+		"password" : "",
+		"dashboUrl": "https://c4j.cucumber.io/connect/rest/api/projects/681/living_docs/603/commits/4850/results",
+		"zephyrUrl": "https://prod-play.zephyr4jiracloud.com/connect/public/rest/api/1.0/",
+		"accessKey" : "",
+		"secretKey": ""
     }
 }
