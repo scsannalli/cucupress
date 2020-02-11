@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"getfeatures": "mocha util/getCucumber.js --env=test --timeout 20000",
-	"zephyrtest" : "mocha util/zephyrTest.js --env=test --timeout 20000",
+	"getFeatures": "mocha util/getZephyrFeature.js --env=test --timeout 20000 ",
+	"reportFeatures" : "mocha util/reportZephyrFeature.js --env=test --timeout 20000",
     "tests": ""
   },
   "repository": {

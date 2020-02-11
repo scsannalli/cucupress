@@ -25,7 +25,6 @@ function generateJWT(method, url) {
 function writeFeature(fileName, text) {
 	fs.writeFile(path.resolve('__dirname', '../cypress/integration', fileName), text, (err) => {
 		if (err) throw err;
-  	console.log('The file has been saved!');
 	});
 }
 
@@ -48,16 +47,6 @@ describe("Zephyr files", () => {
 			.retry(3);
 		fileName = (response.header['content-disposition']).split("=")[1];
 		writeFeature(fileName, response.text);
-	});
-
-	it('upload the report', async () => {
-		token = generateJWT('POST', 'bdd/results/import')
-		let response = await request(params.zephyrUrl)
-			.post('bdd/results/import')
-			.set("Authorization", "jwt " + token)
-			.set("zapiAccessKey", params.accessKey)
-			.attach('bddresult', path.resolve('__dirname', '../cypress/cucumber-json', 'login.cucumber.json'))
-			.retry(3);
 	});
 
 });
