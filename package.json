@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"getFeatures": "mocha util/getZephyrFeature.js --env=test --timeout 20000 ",
-	"reportFeatures" : "mocha util/reportZephyrFeature.js --env=test --timeout 20000",
-    "tests": ""
+    "getFeatures": "mocha util/getZephyrFeature.js --env=test --timeout 20000 ",
+    "reportFeatures": "mocha util/reportZephyrFeature.js --env=test --timeout 20000",
+    "tests": "./node_modules/.bin/cypress run"
   },
   "repository": {
     "type": "git",

@@ -37,7 +37,7 @@ describe("Zephyr files", () => {
 			.post('bdd/results/import')
 			.set("Authorization", "jwt " + token)
 			.set("zapiAccessKey", params.accessKey)
-			.attach('bddresult', path.resolve('__dirname', '../cypress/cucumber-json', 'login.cucumber.json'))
+			.attach('bddresult', path.resolve('__dirname', '../cypress/cucumber-json', 'TST2CP-3.cucumber.json'))
 			.retry(3);
 	});
 

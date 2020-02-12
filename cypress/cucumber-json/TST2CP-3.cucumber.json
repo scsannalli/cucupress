@@ -1,0 +1,115 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Test Feature",
+    "line": 2,
+    "id": "test-feature",
+    "tags": [
+      {
+        "name": "@BDDSTORY-TST2CP-3",
+        "line": 1
+      }
+    ],
+    "uri": "TST2CP-3.feature",
+    "elements": [
+      {
+        "id": "test-feature;test-invalid-login",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Test Invalid Login",
+        "tags": [
+          {
+            "name": "@BDDSTORY-TST2CP-3",
+            "line": 1
+          },
+          {
+            "name": "@BDDTEST-TST2CP-5",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open home page",
+            "result": {
+              "status": "passed",
+              "duration": 1766000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Click Login link",
+            "result": {
+              "status": "passed",
+              "duration": 726000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I see UserName Field",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "test-feature;test-valid-login",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Test Valid Login",
+        "tags": [
+          {
+            "name": "@BDDSTORY-TST2CP-3",
+            "line": 1
+          },
+          {
+            "name": "@BDDTEST-TST2CP-4",
+            "line": 11
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I open home page",
+            "result": {
+              "status": "passed",
+              "duration": 1184000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "Click Login link",
+            "result": {
+              "status": "passed",
+              "duration": 483000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I see UserName Field",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
