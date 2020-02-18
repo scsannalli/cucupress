@@ -39,9 +39,9 @@ describe("Zephyr files", () => {
 	});
 	it("download the files", async () => {
 
-		token = generateJWT('GET', 'test/export/bdd/feature?issueId=10010')
+		token = generateJWT('GET', 'test/export/bdd/feature?issueId=TST2CP-3')
 		let response = await request(params.zephyrUrl)
-			.get("test/export/bdd/feature?issueId=10010")
+			.get("test/export/bdd/feature?issueId=TST2CP-3")
 			.set("Authorization", "jwt " + token)
 			.set("zapiAccessKey", params.accessKey)
 			.retry(3);
