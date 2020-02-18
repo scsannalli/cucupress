@@ -14,35 +14,13 @@ describe('API call to search the issue attachement', () => {
         const env = args.env;
         global.params = config.get(env);
     });
+
     it('Get the URL for the attachement', async () => {
-        let response = await request(params.baseUrl)
+        let response = await request(params.serviceUrl)
             .get('TES-2')
             .set('Content-Type', 'application/json')
             .auth(params.username, params.password)
             .retry(3);
         attachmentLink = await response.body.fields.attachment[0].content;
-    });
-
-    it('Get the data from attachement', async () => {
-        let response = await request(attachmentLink)
-            .get('')
-            .set('Content-Type', 'text/plain')
-            .auth(params.username, params.password)
-            .retry(3);
-        fileLink = response.headers.location;
-    });
-
-    it('Dowloads the file', async () => {
-        fileName = fileLink
-            .split('&name=')
-            .slice(-1)
-            .join();
-        let options = {
-            directory: './cypress/integration',
-            filename: fileName
-        };
-        download(fileLink, options, function(err) {
-            if (err) throw err;
-        });
     });
 });
