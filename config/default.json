@@ -7,6 +7,6 @@
 		"zephyrUrl": "https://prod-play.zephyr4jiracloud.com/connect/public/rest/api/1.0/",
 		"accessKey": "",
 		"secretKey": "",
-		"serviceUrl": ""
+		"serviceUrl": "http://www.mocky.io/v2/5e4d08812d00006f49c0d90d"
 	}
 }

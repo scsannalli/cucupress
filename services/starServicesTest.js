@@ -1,12 +1,9 @@
 let request = require('supertest');
-var download = require('download-file');
 const config = require('config');
 const minimist = require('minimist');
+var parseString = require('xml2js').parseString;
 
 describe('API call to search the issue attachement', () => {
-    let attachmentLink;
-    let fileLink;
-
     before(async function() {
         // fetching the command line arguments
         const args = minimist(process.argv.slice(2));
@@ -17,10 +14,11 @@ describe('API call to search the issue attachement', () => {
 
     it('Get the URL for the attachement', async () => {
         let response = await request(params.serviceUrl)
-            .get('TES-2')
+            .get('')
             .set('Content-Type', 'application/json')
-            .auth(params.username, params.password)
             .retry(3);
-        attachmentLink = await response.body.fields.attachment[0].content;
+        parseString(response.text, { trim: true }, function(err, result) {
+            console.log(JSON.stringify(result));
+        });
     });
 });
