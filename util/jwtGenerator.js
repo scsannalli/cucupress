@@ -4,7 +4,7 @@ const now = moment().utc();
 
 var ACCESS_KEY = 'NGU5M2MzNTQtZTI0ZC0zYTBiLTk5NzAtZDMyNjJkZjhiYmEwIDVlMzkxZWRlYjM0MTUzMGU2MmFjZjMzMCBVU0VSX0RFRkFVTFRfTkFNRQ'
 var SECRET_KEY = '85UMRj81unCxNL0b9w3yVnEvno2TNrrCQ2Ax_y5Mz_o'
-var ACCOUNT_ID = 'b0026753-9903-4912-9a4f-72d63290cb49'
+var ACCOUNT_ID = ''
 
 console.log(ACCOUNT_ID);
 
@@ -17,7 +17,7 @@ function generateJWT(){
 var method = 'GET'
 var uri = '/public/rest/api/1.0/test/export/bdd/feature?issueId=TST2CP-3'
 //var import_features_uri = ''
-var export_results_uri = '/public/rest/api/1.0/bdd/results/import?cycleId=df91a631-e918-453d-a09b-911e2edb4b67&projectId=10002&versionId=-1' 
+var export_results_uri = '/public/rest/api/1.0/bdd/results/import' 
 var val1 = true; 
 if (val1==true){
     method='POST';
@@ -30,7 +30,7 @@ jwt.Request = jwt.fromMethodAndUrl(method, uri);
     console.log(jwt.Request);
 
     jwt_payload = {
-        'sub' : ACCOUNT_ID,
+        'accountId' : '123456:1234abcd-1234-abcd-1234-1234abcd1234',
         'iat': now.unix(),
         'exp': now.add(30, 'minutes').unix(),
         'iss': ACCESS_KEY,
