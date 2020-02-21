@@ -1,0 +1,157 @@
+{
+	"product_data": {
+		"id": 43900,
+		"name": "Duracell - AAA Batteries (4-Pack)",
+		"type": "HardGood",
+		"price": 5.49,
+		"upc": "041333424019",
+		"shipping": 0,
+		"description": "Compatible with select electronic devices; AAA size; DURALOCK Power Preserve technology; 4-pack",
+		"manufacturer": "Duracell",
+		"model": "MN2400B4Z",
+		"url": "http://www.bestbuy.com/site/duracell-aaa-batteries-4-pack/43900.p?id=1051384074145&skuId=43900&cmp=RMXCC",
+		"image": "http://img.bbystatic.com/BestBuy_US/images/products/4390/43900_sa.jpg",
+		"createdAt": "2016-11-17T17:58:03.298Z",
+		"updatedAt": "2016-11-17T17:58:03.298Z",
+		"categories": [{
+				"id": "abcat0208002",
+				"name": "Alkaline Batteries",
+				"createdAt": "2016-11-17T17:57:04.285Z",
+				"updatedAt": "2016-11-17T17:57:04.285Z"
+			},
+			{
+				"id": "pcmcat248700050021",
+				"name": "Housewares",
+				"createdAt": "2016-11-17T17:57:05.399Z",
+				"updatedAt": "2016-11-17T17:57:05.399Z"
+			},
+			{
+				"id": "pcmcat303600050001",
+				"name": "Household Batteries",
+				"createdAt": "2016-11-17T17:57:04.285Z",
+				"updatedAt": "2016-11-17T17:57:04.285Z"
+			},
+			{
+				"id": "pcmcat312300050015",
+				"name": "Connected Home & Housewares",
+				"createdAt": "2016-11-17T17:57:04.285Z",
+				"updatedAt": "2016-11-17T17:57:04.285Z"
+			}
+		]
+	},
+
+	"product_schema": {
+		"total": 51957,
+		"limit": 10,
+		"skip": 0,
+		"data": [{
+			"id": 185230,
+			"name": "Duracell - C Batteries (4-Pack)",
+			"type": "HardGood",
+			"price": 8.99,
+			"upc": "041333440019",
+			"shipping": 0,
+			"description": "Compatible with select electronic devices; C size; DURALOCK Power Preserve technology; 4-pack",
+			"manufacturer": "Duracell",
+			"model": "MN1400R4Z",
+			"url": "http://www.bestbuy.com/site/duracell-c-batteries-4-pack/185230.p?id=1051384046486&skuId=185230&cmp=RMXCC",
+			"image": "http://img.bbystatic.com/BestBuy_US/images/products/1852/185230_sa.jpg",
+			"createdAt": "2016-11-17T17:58:03.298Z",
+			"updatedAt": "2016-11-17T17:58:03.298Z",
+			"categories": [{
+					"id": "abcat0208002",
+					"name": "Alkaline Batteries",
+					"createdAt": "2016-11-17T17:57:04.285Z",
+					"updatedAt": "2016-11-17T17:57:04.285Z"
+				},
+				{
+					"id": "pcmcat248700050021",
+					"name": "Housewares",
+					"createdAt": "2016-11-17T17:57:05.399Z",
+					"updatedAt": "2016-11-17T17:57:05.399Z"
+				},
+				{
+					"id": "pcmcat303600050001",
+					"name": "Household Batteries",
+					"createdAt": "2016-11-17T17:57:04.285Z",
+					"updatedAt": "2016-11-17T17:57:04.285Z"
+				},
+				{
+					"id": "pcmcat312300050015",
+					"name": "Connected Home & Housewares",
+					"createdAt": "2016-11-17T17:57:04.285Z",
+					"updatedAt": "2016-11-17T17:57:04.285Z"
+				}
+			]
+		}]
+	},
+
+	"product_not_found": {
+		"name": "NotFound",
+		"message": "No record found for id '4574357857835735'",
+		"code": 404,
+		"className": "not-found",
+		"errors": {}
+	},
+
+	"product_post_request": {
+		"name": "Ferrari 812 Superfast",
+		"type": "Vehicle",
+		"price": 60000000,
+		"shipping": 10000,
+		"upc": "Nothing",
+		"description": "Luxury Car",
+		"manufacturer": "Ferrari",
+		"model": "812 Superfast",
+		"url": "https://auto.ferrari.com/en_EN/sports-cars-models/car-range/812-superfast/#photo-gallery",
+		"image": "https://auto.ferrari.com/en_EN/wp-content/uploads/sites/5/2018/02/ferrari-812-superfast-header-7.jpg"
+	},
+
+	"product_bad_request": {
+		"name": "Ferrari 812 Superfast",
+		"type": "Vehicle",
+		"price": 60000000,
+		"shipping": 10000,
+		"upc": "Nothing",
+		"description": "Luxury Car",
+		"manufacturer": "Ferrari",
+		"url": "https://auto.ferrari.com/en_EN/sports-cars-models/car-range/812-superfast/#photo-gallery",
+		"image": "https://auto.ferrari.com/en_EN/wp-content/uploads/sites/5/2018/02/ferrari-812-superfast-header-7.jpg"
+	},
+
+	"product_empty_post_response": {
+		"name": "BadRequest",
+		"message": "Invalid Parameters",
+		"code": 400,
+		"className": "bad-request",
+		"data": {},
+		"errors": [
+			"should have required property 'name'",
+			"should have required property 'type'",
+			"should have required property 'upc'",
+			"should have required property 'description'",
+			"should have required property 'model'"
+		]
+	},
+
+	"product_bad_response": {
+		"name": "BadRequest",
+		"message": "Invalid Parameters",
+		"code": 400,
+		"className": "bad-request",
+		"data": {},
+		"errors": [
+			"should have required property 'model'"
+		]
+	},
+
+	"product_type": "HardGood",
+	"product_type_1": "Software",
+	"product_price": 1,
+	"product_price_1": 30,
+	"product_name": "star wars",
+	"shipping_price": 50,
+	"product_category": "Coffee Pods",
+	"product_category_id": "abcat0106004",
+	"no_record_id": 4574357857835735
+}

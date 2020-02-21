@@ -8,6 +8,7 @@
 		"accessKey": "",
 		"secretKey": "",
 		"serviceUrl": "http://www.mocky.io/v2/5e4f9f6330000051002269f4",
+		"serviceJSONbaseUrl": "http://localhost:3030/",
 		"options": {
 			"object": false,
 			"reversible": false,
