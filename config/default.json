@@ -7,6 +7,15 @@
 		"zephyrUrl": "https://prod-play.zephyr4jiracloud.com/connect/public/rest/api/1.0/",
 		"accessKey": "",
 		"secretKey": "",
-		"serviceUrl": "http://www.mocky.io/v2/5e4d08812d00006f49c0d90d"
+		"serviceUrl": "http://www.mocky.io/v2/5e4f9f6330000051002269f4",
+		"options": {
+			"object": false,
+			"reversible": false,
+			"coerce": false,
+			"sanitize": true,
+			"trim": true,
+			"arrayNotation": false,
+			"alternateTextNode": false
+		}
 	}
 }

@@ -1,7 +1,7 @@
 let request = require('supertest');
 const config = require('config');
 const minimist = require('minimist');
-var parseString = require('xml2js').parseString;
+var parser = require('xml2json');
 
 describe('API call to search the issue attachement', () => {
     before(async function() {
@@ -12,13 +12,11 @@ describe('API call to search the issue attachement', () => {
         global.params = config.get(env);
     });
 
-    it('Get the URL for the attachement', async () => {
+    it('Parse the XML response for Validation', async () => {
         let response = await request(params.serviceUrl)
             .get('')
             .set('Content-Type', 'application/json')
             .retry(3);
-        parseString(response.text, { trim: true }, function(err, result) {
-            console.log(JSON.stringify(result));
-        });
+        console.log(parser.toJson(response.text, params.options));
     });
 });
