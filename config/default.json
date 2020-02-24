@@ -17,7 +17,10 @@
 			"trim": true,
 			"arrayNotation": false,
 			"alternateTextNode": false
-		}
+		},
+		"backendValidation":true,
+        "featureFile":"TST2CP-18",
+        "accountId" : ""
 	}
 	
 }
