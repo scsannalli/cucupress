@@ -37,7 +37,7 @@
             "name": "I open home page",
             "result": {
               "status": "passed",
-              "duration": 1737000000
+              "duration": 2051000000
             }
           },
           {
@@ -47,7 +47,7 @@
             "name": "Click Login link",
             "result": {
               "status": "passed",
-              "duration": 589000000
+              "duration": 1185000000
             }
           },
           {
@@ -57,7 +57,7 @@
             "name": "I see UserName Field",
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 20000000
             }
           }
         ]
@@ -86,7 +86,7 @@
             "name": "I open home page",
             "result": {
               "status": "passed",
-              "duration": 1097000000
+              "duration": 1351000000
             }
           },
           {
@@ -96,7 +96,7 @@
             "name": "Click Login link",
             "result": {
               "status": "passed",
-              "duration": 393000000
+              "duration": 1043000000
             }
           },
           {
@@ -106,7 +106,7 @@
             "name": "I see UserName Field",
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 11000000
             }
           }
         ]
