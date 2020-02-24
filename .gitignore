@@ -4,7 +4,8 @@
 *.user
 
 #cypress reports
-**/videos/*
+cypress/videos/*
+cypress/screenshots/*
 
 #package files
 package-lock.json
@@ -123,4 +124,4 @@ MigrationBackup/
 node_modules
 config/default.json
 .DS_Store
-config/default.json
+

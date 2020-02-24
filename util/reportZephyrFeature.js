@@ -20,7 +20,6 @@ function generateJWT(method, url) {
 		
     }
 	var token = jwt.encode(jwt_payload, params.secretKey);
-	console.log(token);
     return token;
 }
 

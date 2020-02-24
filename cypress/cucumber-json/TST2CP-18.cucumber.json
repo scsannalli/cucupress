@@ -37,7 +37,7 @@
             "name": "I open home page",
             "result": {
               "status": "passed",
-              "duration": 1828000000
+              "duration": 1737000000
             }
           },
           {
@@ -46,9 +46,8 @@
             "line": 10,
             "name": "Click Login link",
             "result": {
-              "status": "failed",
-              "duration": 245000000,
-              "error_message": "Uncaught TypeError: result.appendTo is not a function\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at buttonShow (http://localhost:3000/mini-profiler-resources/includes.js?v=251162ee7dc30da30d5370581c664510:177:20)\n    at Object.success (http://localhost:3000/mini-profiler-resources/includes.js?v=251162ee7dc30da30d5370581c664510:129:29)\n    at fire (http://localhost:3000/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1:3233:31)\n    at Object.fireWith [as resolveWith] (http://localhost:3000/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1:3363:7)\n    at done (http://localhost:3000/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1:9841:14)\n    at XMLHttpRequest.callback (http://localhost:3000/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1:10312:8)"
+              "status": "passed",
+              "duration": 589000000
             }
           },
           {
@@ -57,7 +56,8 @@
             "line": 11,
             "name": "I see UserName Field",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 6000000
             }
           }
         ]
@@ -86,7 +86,7 @@
             "name": "I open home page",
             "result": {
               "status": "passed",
-              "duration": 1540000000
+              "duration": 1097000000
             }
           },
           {
@@ -96,7 +96,7 @@
             "name": "Click Login link",
             "result": {
               "status": "passed",
-              "duration": 314000000
+              "duration": 393000000
             }
           },
           {
@@ -106,7 +106,7 @@
             "name": "I see UserName Field",
             "result": {
               "status": "passed",
-              "duration": 8000000
+              "duration": 4000000
             }
           }
         ]
