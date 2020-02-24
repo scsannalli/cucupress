@@ -1,0 +1,116 @@
+[
+  {
+    "description": "Login Story for Client Connect",
+    "keyword": "Feature",
+    "name": "Test Login",
+    "line": 2,
+    "id": "test-login",
+    "tags": [
+      {
+        "name": "@BDDSTORY-TST2CP-18",
+        "line": 1
+      }
+    ],
+    "uri": "TST2CP-18.feature",
+    "elements": [
+      {
+        "id": "test-login;test-login-with-invalid-credentials",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Test Login With Invalid Credentials",
+        "tags": [
+          {
+            "name": "@BDDSTORY-TST2CP-18",
+            "line": 1
+          },
+          {
+            "name": "@BDDTEST-TST2CP-20",
+            "line": 6
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I open home page",
+            "result": {
+              "status": "passed",
+              "duration": 1828000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Click Login link",
+            "result": {
+              "status": "failed",
+              "duration": 245000000,
+              "error_message": "Uncaught TypeError: result.appendTo is not a function\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at buttonShow (http://localhost:3000/mini-profiler-resources/includes.js?v=251162ee7dc30da30d5370581c664510:177:20)\n    at Object.success (http://localhost:3000/mini-profiler-resources/includes.js?v=251162ee7dc30da30d5370581c664510:129:29)\n    at fire (http://localhost:3000/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1:3233:31)\n    at Object.fireWith [as resolveWith] (http://localhost:3000/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1:3363:7)\n    at done (http://localhost:3000/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1:9841:14)\n    at XMLHttpRequest.callback (http://localhost:3000/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1:10312:8)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I see UserName Field",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "test-login;test-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Test Login With Valid Credentials",
+        "tags": [
+          {
+            "name": "@BDDSTORY-TST2CP-18",
+            "line": 1
+          },
+          {
+            "name": "@BDDTEST-TST2CP-19",
+            "line": 13
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I open home page",
+            "result": {
+              "status": "passed",
+              "duration": 1540000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "Click Login link",
+            "result": {
+              "status": "passed",
+              "duration": 314000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I see UserName Field",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

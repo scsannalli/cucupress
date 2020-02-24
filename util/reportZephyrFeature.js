@@ -12,23 +12,24 @@ let token;
 function generateJWT(method, url) {
 	jwt.Request = jwt.fromMethodAndUrl(method, '/public/rest/api/1.0/' + url);
     jwt_payload = {
+		'sub': params.accountId,
         'iat': now.unix(),
         'exp': now.add(10, 'minutes').unix(),
         'iss': params.accessKey,
-        'qsh': jwt.createQueryStringHash(jwt.Request),
+		'qsh': jwt.createQueryStringHash(jwt.Request),
+		
     }
-    var token = jwt.encode(jwt_payload, params.secretKey);
+	var token = jwt.encode(jwt_payload, params.secretKey);
+	console.log(token);
     return token;
 }
 
 describe("Zephyr files", () => {
-
 	before(async function () {
-
 		const args = minimist(process.argv.slice(2));
 		const env = args.env;
 		global.params = config.get(env);
-
+		featureFileName = params.featureFile;
 	});
 
 	it('upload the report', async () => {
@@ -37,7 +38,7 @@ describe("Zephyr files", () => {
 			.post('bdd/results/import')
 			.set("Authorization", "jwt " + token)
 			.set("zapiAccessKey", params.accessKey)
-			.attach('bddresult', path.resolve('__dirname', '../cypress/cucumber-json', 'TST2CP-3.cucumber.json'))
+			.attach('bddresult', path.resolve('__dirname', '../cypress/cucumber-json', featureFileName+'.cucumber.json'))
 			.retry(3);
 	});
 

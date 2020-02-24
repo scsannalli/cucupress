@@ -17,9 +17,10 @@ function generateJWT(method, url) {
         'exp': now.add(10, 'minutes').unix(),
         'iss': params.accessKey,
         'qsh': jwt.createQueryStringHash(jwt.Request),
-    }
+	}
     var token = jwt.encode(jwt_payload, params.secretKey);
-    return token;
+
+	return token;
 }
 
 function writeFeature(fileName, text) {
@@ -35,13 +36,16 @@ describe("Zephyr files", () => {
 		const args = minimist(process.argv.slice(2));
 		const env = args.env;
 		global.params = config.get(env);
+		featureId=params.featureFile;
+		console.log(featureId);
 
 	});
 	it("download the files", async () => {
-
-		token = generateJWT('GET', 'test/export/bdd/feature?issueId=TST2CP-3')
+		resource  = 'test/export/bdd/feature?issueId='+featureId;
+		console.log(resource);
+		token = generateJWT('GET', resource)
 		let response = await request(params.zephyrUrl)
-			.get("test/export/bdd/feature?issueId=TST2CP-3")
+			.get(resource)
 			.set("Authorization", "jwt " + token)
 			.set("zapiAccessKey", params.accessKey)
 			.retry(3);

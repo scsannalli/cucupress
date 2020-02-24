@@ -13,34 +13,31 @@ console.log(token);
 
 
 function generateJWT(){
-
 var method = 'GET'
 var uri = '/public/rest/api/1.0/test/export/bdd/feature?issueId=TST2CP-3'
-//var import_features_uri = ''
 var export_results_uri = '/public/rest/api/1.0/bdd/results/import' 
 var val1 = true; 
 if (val1==true){
     method='POST';
     uri = export_results_uri;
 }
-
-
 jwt.Request = jwt.fromMethodAndUrl(method, uri);
-
     console.log(jwt.Request);
 
+    var jwt_payload = getPayLoad();
+    console.log(jwt_payload)
+    var token = jwt.encode(jwt_payload, SECRET_KEY);
+    return token;
+}
+
+
+function getPayLoad() {
     jwt_payload = {
-        'accountId' : '123456:1234abcd-1234-abcd-1234-1234abcd1234',
+        'sub': 'b0026753-9903-4912-9a4f-72d63290cb49',
         'iat': now.unix(),
         'exp': now.add(30, 'minutes').unix(),
         'iss': ACCESS_KEY,
         'qsh': jwt.createQueryStringHash(jwt.Request),
-        
-    }
-
-    console.log(jwt_payload)
-
-    var token = jwt.encode(jwt_payload, SECRET_KEY);
-
-    return token;
+    };
 }
+

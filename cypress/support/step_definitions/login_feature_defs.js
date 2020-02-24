@@ -1,6 +1,7 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
   
-  
+
+
   Given ('I open home page', () => {
     cy.visit('localhost:3000');
   } 
@@ -13,5 +14,5 @@ import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 
   Then('I see UserName Field', rating=>
   {
-      
+     
   });
