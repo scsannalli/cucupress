@@ -1,14 +1,10 @@
 const mysql = require('mysql');
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'userb',
-  password: 'password',
-  database: 'sitepoint'
-});
 
-let gerLoad  = getPayLoad();
 
-function getPayLoad(){ 
+// let gerLoad  = getPayLoad();
+
+function executeMySQLQuery(config){ 
+  const connection = mysql.createConnection(config.env.db);
   connection.connect((err) => {
     if (err) throw err;
     console.log('Connected!');
@@ -21,8 +17,9 @@ function getPayLoad(){
       console.log(`${row.name} lives in ${row.city}`);
     });
   })
-  end()
+  end(connection)
 };
+
 
 function end(connection)
 {
@@ -33,5 +30,5 @@ connection.end((err) => {
   });
 };
 
-module.exports.getPayLoad = getPayLoad;
+module.exports.executeMySQLQuery = executeMySQLQuery;
 

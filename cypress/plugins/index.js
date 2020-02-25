@@ -12,48 +12,45 @@
 // the project's config changing)
 
 const cucumber = require('cypress-cucumber-preprocessor').default
- 
-// module.exports = (on, config) => {
-//   on('file:preprocessor', cucumber())
-// }
 
-const mysql = require('mysql')
+const oracledb = require('oracledb');
+const sdb = require('../../db/mqsqldb');
+const odb = require('../../db/oracledb');
 
-function getPayLoad(){
-// const connection = mysql.createConnection(config.env.db);
-const rows ="";
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'userb',
-  password: 'password',
-  database: 'sitepoint'
-});
- connection.connect((err) => {
-   if (err) throw err;
-   console.log('Connected!');
- });
- connection.query('SELECT * FROM authors', (err,rows) => {
-   if(err) throw err;
-   console.log('Data received from Db:');
-   console.log(rows);
-   rows.forEach( (row) => {
-     console.log(`${row.name} lives in ${row.city}`);
-   });
- })
- connection.end((err) => {
-   // The connection is terminated gracefully
-   // Ensures all remaining queries are executed
-   // Then sends a quit packet to the MySQL server.
- });
- return rows
+function getMySQLDetails(config){
+if (config.env.backend){
+  sdb.executeMySQLQuery(config);
+};
+ return null
 };
 
+function getODB(config)
+{ 
+  if (config.env.backend){
+  odb.executeODB(config);
+  }
+  return null
+}
+
+function validateAPIs(config){
+  console.log('Validate APIs');
+  return null
+}
+
+
 module.exports = (on, config) => {
-  // Usage: cy.task('queryDb', query)
+  on('file:preprocessor', cucumber()),
+  
   on('task', {
-    queryDb: query => {return getPayLoad()},
+    queryDb: execute => {return getMySQLDetails(config)},
   }),
-  on('file:preprocessor', cucumber())
+
+  on('task', {
+    odb: execute =>  {return getODB(config)}}),
+
+  on('task', {
+    api: execute => {return validateAPIs(config)},
+  })
 
 }
 

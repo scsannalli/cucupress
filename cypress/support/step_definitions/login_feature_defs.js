@@ -1,8 +1,6 @@
 const {Given, When, Then } =  require("cypress-cucumber-preprocessor/steps");
-//const mysqlactions =  require ("../../../db/mysqlactions")
 
 var envVal;
-
 beforeEach(function () {
   cy.log('Run before every test for every spec file');
   envVal = Cypress.env('backend')
@@ -19,13 +17,11 @@ beforeEach(function () {
   });
 
   Then('I see UserName Field', rating=>
-  {
-      if(envVal)
-      {
+  {   
         cy.log("Trigger Backend validation");
+        cy.task('api')
         cy.task('queryDb')
-      } 
-
+        cy.task('odb')
   });
 
   afterEach(function () {
