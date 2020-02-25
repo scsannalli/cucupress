@@ -8,6 +8,12 @@
         }
      }, 
      "env": {
-      "backend": true
+      "backend": true,
+      "db": {
+        "host": "localhost",
+        "user": "userb",
+        "password": "password",
+        "database": "sitepoint"
+      }
     }
 }

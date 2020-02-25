@@ -1,7 +1,8 @@
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import getPayLoad from "../../../db/mysqlactions"
+const {Given, When, Then } =  require("cypress-cucumber-preprocessor/steps");
+//const mysqlactions =  require ("../../../db/mysqlactions")
 
-var envVal = false;
+var envVal;
+
 beforeEach(function () {
   cy.log('Run before every test for every spec file');
   envVal = Cypress.env('backend')
@@ -22,7 +23,7 @@ beforeEach(function () {
       if(envVal)
       {
         cy.log("Trigger Backend validation");
-        getPayLoad
+        cy.task('queryDb')
       } 
 
   });
