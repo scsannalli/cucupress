@@ -8,7 +8,7 @@
         }
      }, 
      "env": {
-      "backend": true,
+      "backend": false,
       "db": {
         "host": "localhost",
         "user": "userb",
@@ -16,10 +16,10 @@
         "database": "sitepoint"
       },
       "odb":{
-      "user"          : "HR",
-      "password"      : "oracle",
-      "connectString" : "localhost:1521/orcl",
-      "database":"orcl"
-      }
+        "user"          : "HR",
+        "password"      : "oracle",
+        "connectString" : "localhost:1521/orcl",
+        "database":"orcl"
+      }      
     }
 }

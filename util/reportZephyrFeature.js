@@ -32,9 +32,14 @@ describe("Zephyr files", () => {
 	});
 
 	it('upload the report', async () => {
-		token = generateJWT('POST', 'bdd/results/import')
+		resource = 'bdd/results/import';
+		if (params.nonadhoc){
+			resource = 'bdd/results/import?cycleId='+params.cycleId+'&projectId='+params.projectId+'&versionId='+params.versionId	
+		}	
+		console.log(resource);
+		token = generateJWT('POST',resource )	
 		let response = await request(params.zephyrUrl)
-			.post('bdd/results/import')
+			.post(resource)
 			.set("Authorization", "jwt " + token)
 			.set("zapiAccessKey", params.accessKey)
 			.attach('bddresult', path.resolve('__dirname', '../cypress/cucumber-json', featureFileName+'.cucumber.json'))

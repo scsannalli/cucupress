@@ -1,6 +1,5 @@
 const mysql = require('mysql');
 
-
 // let gerLoad  = getPayLoad();
 
 function executeMySQLQuery(config){ 

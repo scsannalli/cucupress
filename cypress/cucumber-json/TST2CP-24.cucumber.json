@@ -1,0 +1,116 @@
+[
+  {
+    "description": "As an IB Customer User, I need to login to Client Connect Application so that I Can access Client Connect Dashboard.\n\nScenario : Valid Users Login Scenario\nGiven I'm on the Client Connect Login Page\nWhen I enter User Valid Credentials\nThen I Can access Client Connect Dashboard\n\nScenario : Invalid Users Login Scenario\nGiven I'm on the Client Connect Login Page\nWhen I enter User In Valid Credentials\nThen I see Invalid user error message",
+    "keyword": "Feature",
+    "name": "Test Client Connect Login",
+    "line": 2,
+    "id": "test-client-connect-login",
+    "tags": [
+      {
+        "name": "@BDDSTORY-TST2CP-24",
+        "line": 1
+      }
+    ],
+    "uri": "TST2CP-24.feature",
+    "elements": [
+      {
+        "id": "test-client-connect-login;invalid-users-login-scenario",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Invalid Users Login Scenario",
+        "tags": [
+          {
+            "name": "@BDDSTORY-TST2CP-24",
+            "line": 1
+          },
+          {
+            "name": "@BDDTEST-TST2CP-26",
+            "line": 16
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I'm on the Client Connect Login Page",
+            "result": {
+              "status": "passed",
+              "duration": 2753000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I enter User In Valid Credentials",
+            "result": {
+              "status": "passed",
+              "duration": 705000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I see Invalid user error message",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "test-client-connect-login;valid-users-login-scenario",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Valid Users Login Scenario",
+        "tags": [
+          {
+            "name": "@BDDSTORY-TST2CP-24",
+            "line": 1
+          },
+          {
+            "name": "@BDDTEST-TST2CP-25",
+            "line": 23
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "I'm on the Client Connect Login Page",
+            "result": {
+              "status": "passed",
+              "duration": 2031000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I enter User Valid Credentials",
+            "result": {
+              "status": "passed",
+              "duration": 452000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I Can access Client Connect Dashboard",
+            "result": {
+              "status": "passed",
+              "duration": 70000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

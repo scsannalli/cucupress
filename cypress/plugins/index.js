@@ -46,7 +46,8 @@ module.exports = (on, config) => {
   }),
 
   on('task', {
-    odb: execute =>  {return getODB(config)}}),
+    odb: execute =>  {return getODB(config)}
+  }),
 
   on('task', {
     api: execute => {return validateAPIs(config)},
