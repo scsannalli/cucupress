@@ -2,13 +2,25 @@ const request = require('supertest');
 const testData = require('../test_data/products.json');
 const minimist = require('minimist');
 const config = require('config');
+let fs = require("fs");
 const expect = require('chai').expect;
+let path = require('path')
+var parseString = require('xml2js').parseString;
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+
+function writeFeature(fileName, text) {
+    fs.writeFile(path.resolve('__dirname', '../cypress/integration/examples', fileName), text, (err) => {
+        if (err) throw err;
+    });
+}
 
 describe('Products API Test', () => {
+    
     let post_id;
     let post_request = testData.product_post_request;
     let patch_request = testData.product_post_request;
 
+    
     before(async function() {
         // fetching the command line arguments
         const args = minimist(process.argv.slice(2));
@@ -17,6 +29,22 @@ describe('Products API Test', () => {
         global.params = config.get(env);
     });
 
+    it('Get the feature', async() => {
+        let response = await request('https://jira2.sgp.dbs.com:8443/dcifjira/rest/zapi/latest/teststep/2010854/')
+        .get('')
+        .set('Authorization', 'Basic auth')
+        .retry(3);
+        
+        let body = await response.body.stepBeanCollection;
+        let featureData = '';
+
+        body.forEach(element => {
+            featureData = featureData + element.step + '\n'
+        });
+        console.log(featureData)
+        writeFeature('test.feature', featureData);
+    })
+    
     it('Get all the products', async () => {
         const response = await request(params.serviceJSONbaseUrl)
             .get('products')
@@ -148,4 +176,7 @@ describe('Products API Test', () => {
             .retry(3);
         expect(await response.statusCode).to.equal(404);
     });
+    
+    
+    
 });
